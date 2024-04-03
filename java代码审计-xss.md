@@ -21,6 +21,8 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 <div>
     ${content}
 </div>
+<p th:utext=${content}></p>       <!-- utext would occur xss -->
+<p th:text=${content}></p>       <!-- text would not occur xss -->
 </body>
 </html>
 ```
