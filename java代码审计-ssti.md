@@ -1,9 +1,8 @@
 # java代码审计-ssti
-
+https://www.cnblogs.com/LittleHann/p/17846825.html#_lab2_0_3
 ## 0x01漏洞挖掘
 
 ### Velocity
-https://www.cnblogs.com/LittleHann/p/17846825.html#_lab2_0_3
 ```java
 @RequestMapping("/ssti/velocity")
 public String velocity(@RequestParam(name = "content") String content) {
@@ -86,6 +85,13 @@ freemarker与velocity的攻击方式不太一样，freemarker可利用的点在�
 ```
 
 将上面的payload写入到模版文件保存，然后让freemarker加载即可。
+
+### thymeleaf
+
+```java
+templateEngine = new TemplateEngine();
+templateEngine.setTemplateResolver(templateResolver);
+```
 
 ## 0x02漏洞防御
 
