@@ -3,7 +3,7 @@
 ## 0x01漏洞挖掘
 
 ### Velocity
-
+https://www.cnblogs.com/LittleHann/p/17846825.html#_lab2_0_3
 ```java
 @RequestMapping("/ssti/velocity")
 public String velocity(@RequestParam(name = "content") String content) {
